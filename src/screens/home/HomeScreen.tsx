@@ -1,30 +1,19 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import React, {useEffect} from 'react';
-import {ActivityIndicator, View} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 import {Text} from '~/components/atom/Text';
 import {useTheme} from '~/hooks/useTheme';
 import {AppNavigatorStackParamsList} from '~/navigation/appNavigator/types';
 import i18n from '~/translations/i18n';
 
-type OnboardScreenProps = NativeStackScreenProps<
+type HomeScreenProps = NativeStackScreenProps<
   AppNavigatorStackParamsList,
-  'ONBOARD_ROUTE'
+  'HOME_ROUTE'
 >;
 
-export const OnboardScreen: React.FC<OnboardScreenProps> = (
-  props,
-): JSX.Element => {
+export const HomeScreen: React.FC<HomeScreenProps> = props => {
   const {navigation} = props;
   const theme = useTheme();
-
-  useEffect(() => {
-    setTimeout(
-      () => {
-        navigation.replace('HOME_ROUTE');
-      },
-      __DEV__ ? 50 : 1500,
-    );
-  }, []);
 
   return (
     <View
@@ -42,7 +31,6 @@ export const OnboardScreen: React.FC<OnboardScreenProps> = (
         textAlign="center">
         {i18n.t('theo_app')}
       </Text>
-      <ActivityIndicator size="large" color={theme.colors.primary1} />
     </View>
   );
 };

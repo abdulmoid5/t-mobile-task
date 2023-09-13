@@ -3,8 +3,9 @@ import React from 'react';
 import {useTheme} from '~/hooks/useTheme';
 import {OnboardScreen} from '~/screens/onboard/OnboardScreen';
 import {HeaderNavBack} from '../headerNavBackButton';
-import {ONBOARD_ROUTE} from '../routes';
+import {HOME_ROUTE, ONBOARD_ROUTE} from '../routes';
 import type {AppNavigatorStackParamsList} from './types';
+import {HomeScreen} from '~/screens/home/HomeScreen';
 
 type AppNavigatorStackParamsListTodo = AppNavigatorStackParamsList & any;
 const AppNavigatorStack =
@@ -31,6 +32,13 @@ export const AppNavigator: React.FC = () => {
         <AppNavigatorStack.Screen
           name={ONBOARD_ROUTE}
           component={OnboardScreen}
+          options={{
+            header: () => null,
+          }}
+        />
+        <AppNavigatorStack.Screen
+          name={HOME_ROUTE}
+          component={HomeScreen}
           options={{
             header: () => null,
           }}
