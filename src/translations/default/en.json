@@ -1,0 +1,12 @@
+{
+  "theo_app":"Theo",
+  "accessibility_label_menu": "Menu",
+  "accessibility_hint_open_menu": "Opens the menu bar",
+  "accessibility_label_back": "Back",
+  "accessibility_hint_navigate_back": "Navigates to the previous screen",
+  "bottom_tab_post_view_title": "Post View",
+  "bottom_tab_card_view_title": "Card View",
+  "error_getting_location":"Error while fetching location",
+  "postview_latitude":"Latitude:",
+  "postview_longitude":"Longitude:"
+}
