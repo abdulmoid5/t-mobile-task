@@ -18,12 +18,9 @@ export const OnboardScreen: React.FC<OnboardScreenProps> = (
   const theme = useTheme();
 
   useEffect(() => {
-    setTimeout(
-      () => {
-        navigation.replace('HOME_ROUTE');
-      },
-      __DEV__ ? 50 : 1500,
-    );
+    setTimeout(() => {
+      navigation.replace('HOME_ROUTE');
+    }, 1500);
   }, []);
 
   return (
